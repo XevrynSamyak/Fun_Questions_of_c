@@ -12,13 +12,14 @@ int main(){
     for(i=0;i<a;i++){
      printf("enter the item you want:\n ");
      fgets(item,sizeof(item),stdin);
+     item[strcspn(item, "\n")] = 0;
 
      printf("enter the number of item you want: ");
      scanf("%d",&number_of_items);
+     getchar();
 
      printf("enter price of the item: ");
      scanf("%f",&price);
-     
      getchar();
 
      sum += price * number_of_items;
